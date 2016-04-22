@@ -1737,14 +1737,12 @@ var requirejs, require, define;
     }
 
     /**
-     * Main entry point.
+     * 主入口点。
      *
-     * If the only argument to require is a string, then the module that
-     * is represented by that string is fetched for the appropriate context.
+     * 如果只传递给 require 一个字符串参数，则为 context 载入这个字符串代表的模块。
      *
-     * If the first argument is an array, then it will be treated as an array
-     * of dependency string names to fetch. An optional function callback can
-     * be specified to execute when all of those dependencies are available.
+     * 如果第一个参数是数组，则认为它是一个需要加载的依赖模块列表。
+     * 可以传递一个可选的回调函数，它会在这些依赖文件全部加载之后执行。
      *
      * Make a local req variable to help Caja compliance (it assumes things
      * on a require that are not standardized), and to give a short
