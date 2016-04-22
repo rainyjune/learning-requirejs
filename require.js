@@ -63,8 +63,7 @@ var requirejs, require, define;
     }
 
     /**
-     * Helper function for iterating over an array backwards. If the func
-     * returns a true value, it will break out of the loop.
+     * 助手函数用于反向遍历一个数组，如 func 返回一个为真的值则停止遍历。
      */
     function eachReverse(ary, func) {
         if (ary) {
