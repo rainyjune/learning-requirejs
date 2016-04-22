@@ -49,8 +49,7 @@ var requirejs, require, define;
     }
 
     /**
-     * Helper function for iterating over an array. If the func returns
-     * a true value, it will break out of the loop.
+     * 助手函数用于遍历一个数组，如 func 返回一个为真的值则停止遍历。
      */
     function each(ary, func) {
         if (ary) {
