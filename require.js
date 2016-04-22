@@ -122,8 +122,7 @@ var requirejs, require, define;
         return target;
     }
 
-    //Similar to Function.prototype.bind, but the 'this' object is specified
-    //first, since it is easier to read/figure out what 'this' will be.
+    //与 Function.prototype.bind 类似，但首先指定 'this' 对象，因为这样更容易知道 'this' 是什么。
     function bind(obj, fn) {
         return function () {
             return fn.apply(obj, arguments);
