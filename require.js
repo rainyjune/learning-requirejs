@@ -85,9 +85,7 @@ var requirejs, require, define;
     }
 
     /**
-     * Cycles over properties in an object and calls a function for each
-     * property value. If the function returns a truthy value, then the
-     * iteration is stopped.
+     * 遍历对象中的属性，同时为每个属性调用一个函数。如函数返回一个为真的值则停止遍历。
      */
     function eachProp(obj, func) {
         var prop;
