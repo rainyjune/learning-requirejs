@@ -168,14 +168,13 @@ var requirejs, require, define;
     }
 
     if (typeof define !== 'undefined') {
-        //If a define is already in play via another AMD loader,
-        //do not overwrite.
+        //如果使用了其他的 AMD 加载器，define 函数已经存在，不覆盖它。
         return;
     }
 
     if (typeof requirejs !== 'undefined') {
         if (isFunction(requirejs)) {
-            //Do not overwrite an existing requirejs instance.
+            //不要覆盖已经存在的 requirejs 实例。
             return;
         }
         cfg = requirejs;
