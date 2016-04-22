@@ -150,10 +150,10 @@ var requirejs, require, define;
     }
 
     /**
-     * Constructs an error with a pointer to an URL with more information.
-     * @param {String} id the error ID that maps to an ID on a web page.
-     * @param {String} message human readable error.
-     * @param {Error} [err] the original error, if there is one.
+     * 构造一个 error 包含有一个 URL 链接，在这个链接中可以获得更多信息。
+     * @param {String} id 一个 error ID。
+     * @param {String} message 可阅读的错误信息。
+     * @param {Error} [err] 原始的错误信息，如果有的话。
      *
      * @returns {Error}
      */
