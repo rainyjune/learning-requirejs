@@ -99,8 +99,7 @@ var requirejs, require, define;
     }
 
     /**
-     * Simple function to mix in properties from source into target,
-     * but only if target does not already have a property of the same name.
+     * 把一个对象中的所有属性复制到另一个对象中，但前提是目标对象中没有同名的属性。
      */
     function mixin(target, source, force, deepStringMixin) {
         if (source) {
