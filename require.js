@@ -137,8 +137,7 @@ var requirejs, require, define;
         throw err;
     }
 
-    //Allow getting a global that is expressed in
-    //dot notation, like 'a.b.c'.
+    //允许得到点号风格的变量值，例如 'a.b.c'。
     function getGlobal(value) {
         if (!value) {
             return value;
