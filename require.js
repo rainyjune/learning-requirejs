@@ -181,9 +181,9 @@ var requirejs, require, define;
         requirejs = undefined;
     }
 
-    //Allow for a require config object
+    //允许 require 变量存放配置参数
     if (typeof require !== 'undefined' && !isFunction(require)) {
-        //assume it is a config object.
+        // 假设它是一个保存配置参数的对象。
         cfg = require;
         require = undefined;
     }
