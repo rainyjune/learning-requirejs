@@ -1750,16 +1750,16 @@ var requirejs, require, define;
      */
     req = requirejs = function (deps, callback, errback, optional) {
 
-        //Find the right context, use default
+        //找到正确的 context，使用默认的
         var context, config,
             contextName = defContextName;
 
-        // Determine if have config object in the call.
+        // 检测在调用时是否含有 config 对象
         if (!isArray(deps) && typeof deps !== 'string') {
-            // deps is a config object
+            // deps 是一个 config 对象
             config = deps;
             if (isArray(callback)) {
-                // Adjust args if there are dependencies
+                // 如果存在依赖模块则调整参数
                 deps = callback;
                 callback = errback;
                 errback = optional;
@@ -1768,15 +1768,18 @@ var requirejs, require, define;
             }
         }
 
+        // 若指定了 context 则把当前的 context 名字设置为用户指定的字符串
         if (config && config.context) {
             contextName = config.context;
         }
 
+        // 得到当前的 context ，如果还不存在则新建一个。
         context = getOwn(contexts, contextName);
         if (!context) {
             context = contexts[contextName] = req.s.newContext(contextName);
         }
 
+        // 若含有配置参数，调用 context.configure 来实现配置
         if (config) {
             context.configure(config);
         }
